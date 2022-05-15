@@ -56,15 +56,15 @@ main()
 	struct Olypic orm[8];
 	for (int i = 0; i < 8; i++)
 	{
-		fscanf_s(fp, "%s\t%d\t%d\t%d\t%d\n",orm[i].name,100,&orm[i].goldNum,&orm[i].silverNum,&orm[i].copperNum,&orm[i].totalNum);
+		fscanf(fp, "%s\t%d\t%d\t%d\t%d\n",orm[i].name,100,&orm[i].goldNum,&orm[i].silverNum,&orm[i].copperNum,&orm[i].totalNum);
 	}
 
 	fclose(fp);
 	bubbleSort(orm, 8);
 	FILE* outfp = fopen("D:/demo2/file_Olypic.txt", "w");
-	for (int i = 0; i < 8; i++)
+	for (int j = 0; j < 8; j++)
 	{
-		fprintf(outfp, "%s\t%d\t%d\t%d\t%d\n", orm[i].name, orm[i].goldNum, orm[i].silverNum, orm[i].copperNum, orm[i].totalNum);
+		fprintf(outfp, "%s\t%d\t%d\t%d\t%d\n", orm[j].name, orm[j].goldNum, orm[j].silverNum, orm[j].copperNum, orm[j].totalNum);
 	}
 	fclose(outfp);
 
